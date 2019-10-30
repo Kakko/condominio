@@ -6,8 +6,8 @@ global $db;
 
 $config = array();
 if(ENVIRONMENT == 'development') {
-	define("BASE_URL", "http://localhost/hortadigital/");
-	$config['dbname'] = 'hortadigital';
+	define("BASE_URL", "http://localhost/condominio/");
+	$config['dbname'] = 'condominio';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
 	$config['dbpass'] = 'root';
