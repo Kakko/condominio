@@ -14,10 +14,10 @@
         <img src="<?php echo BASE_URL; ?>assets/images/icons/cond.png">
         <div class="container">
             <form method="POST">
-                <label for="login">E-mail2:</label><br/>
-                <input type="email" name="email" placeholder="Digite seu E-mail" id="input"><br/><br/>
+                <label for="login">E-mail:</label><br/>
+                <input type="email" name="email" placeholder="Digite seu E-mail" id="input" autocomplete="off"><br/><br/>
                 <label for="senha">Senha:</label><br/>
-                <input type="password" name="senha" placeholder="Digite sua Senha" id="input"><br/><br/><br/>
+                <input type="password" name="password" placeholder="Digite sua Senha" id="input"><br/><br/><br/>
                 <input type="submit" class="btn btn-success" value="Entrar">
             </form>
         </div>

@@ -3,14 +3,14 @@ class loginController extends Controller {
 
     public function index() {
         $data = array();
-        $u = new Usuarios();
+        $u = new Users();
 
-        if(isset($_POST['email']) && !empty($_POST['senha'])) {
+        if(isset($_POST['email']) && !empty($_POST['password'])) {
 
             $email = addslashes($_POST['email']);
-            $senha = addslashes($_POST['senha']);
+            $password = addslashes($_POST['password']);
 
-            if($u->doLogin($email, $senha)) {
+            if($u->doLogin($email, $password)) {
                 header("Location: ".BASE_URL);
                 exit;
             } else {
@@ -23,7 +23,7 @@ class loginController extends Controller {
 
     public function logout(){
         $data = array();
-        $u = new Usuarios();
+        $u = new Users();
 
         $u->logout();
         header("Location: ".BASE_URL);

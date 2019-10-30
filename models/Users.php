@@ -1,5 +1,5 @@
 <?php
-class Usuarios extends Model {
+class Users extends Model {
 
     public function isLogged() {
         if(isset($_SESSION['lgUser']) && !empty($_SESSION['lgUser'])) {
@@ -14,7 +14,7 @@ class Usuarios extends Model {
             $array = array();
             $id = $_SESSION['lgUser'];
 
-            $sql = $this->db->prepare("SELECT * FROM hortadigital_usuarios WHERE id = :id");
+            $sql = $this->db->prepare("SELECT * FROM users WHERE id = :id");
             $sql->bindValue(":id", $id);
             $sql->execute();
 
@@ -25,11 +25,11 @@ class Usuarios extends Model {
         }
     }
 
-    public function doLogin($email, $senha) {
+    public function doLogin($email, $password) {
 
-        $sql = $this->db->prepare("SELECT * FROM hortadigital_usuarios WHERE email = :email AND senha = :senha");
+        $sql = $this->db->prepare("SELECT * FROM users WHERE email = :email AND password = :password");
         $sql->bindValue(":email", $email);
-        $sql->bindValue(":senha", md5($senha));
+        $sql->bindValue(":password", md5($password));
         $sql->execute();
 
         if($sql->rowCount() > 0){

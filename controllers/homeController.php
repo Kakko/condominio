@@ -2,7 +2,7 @@
 class homeController extends Controller {
 
     public function index() {
-    $u = new Usuarios();
+    $u = new Users();
     if($u->isLogged() == false){
         header("Location: ".BASE_URL."login/");
     }
