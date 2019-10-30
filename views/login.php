@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Horta Digital</title>
+    <title>Gestão de Condomínios</title>
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
 </head>
 <body>
     <div class="bg_horta"></div>
     <div class="login_area">
-        <img src="<?php echo BASE_URL; ?>assets/images/horta_logo.png">
+        <img src="<?php echo BASE_URL; ?>assets/images/icons/cond.png">
         <div class="container">
             <form method="POST">
-                <label for="login">E-mail:</label><br/>
+                <label for="login">E-mail2:</label><br/>
                 <input type="email" name="email" placeholder="Digite seu E-mail" id="input"><br/><br/>
                 <label for="senha">Senha:</label><br/>
                 <input type="password" name="senha" placeholder="Digite sua Senha" id="input"><br/><br/><br/>
