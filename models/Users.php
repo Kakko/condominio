@@ -1,27 +1,13 @@
 <?php
 class Users extends Model {
 
+    private $userInfo;
+
     public function isLogged() {
         if(isset($_SESSION['lgUser']) && !empty($_SESSION['lgUser'])) {
             return true;
         } else {
             return false;
-        }
-    }
-
-    public function setLoggedUser() {
-        if(isset($_SESSION['lgUser']) && !empty($_SESSION['lgUser'])) {
-            $array = array();
-            $id = $_SESSION['lgUser'];
-
-            $sql = $this->db->prepare("SELECT * FROM users WHERE id = :id");
-            $sql->bindValue(":id", $id);
-            $sql->execute();
-
-            if($sql->rowCount() > 0){
-                $array = $sql->fetchAll();
-            }
-            return $array;
         }
     }
 
@@ -38,6 +24,37 @@ class Users extends Model {
             return true;
         } else {
             return false;
+        }
+    }
+
+    public function setLoggedUser() {
+        if(isset($_SESSION['lgUser']) && !empty($_SESSION['lgUser'])) {
+            $id = $_SESSION['lgUser'];
+
+            $sql = $this->db->prepare("SELECT * FROM users WHERE id = :id");
+            $sql->bindValue(":id", $id);
+            $sql->execute();
+
+            if($sql->rowCount() > 0){
+                $this->userInfo = $sql->fetch();
+            }
+        }
+    }
+
+    public function getName(){ //Buscar o e-mail do usuário logado.
+
+        if(isset($this->userInfo['name'])){
+            return $this->userInfo['name'];
+        } else {
+            return 'não tem';
+        }
+    }
+
+    public function getBuild(){ //Buscar o ID do prédio
+        if(isset($this->userInfo['building_id'])){
+            return $this->userInfo['building_id'];
+        } else {
+            return 'não tem';
         }
     }
 
