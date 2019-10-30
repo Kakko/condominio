@@ -11,17 +11,6 @@
     	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
 	</head>
 	<body>
-		<div class="topo">
-			<div class="brand">
-				<img src="<?php echo BASE_URL; ?>assets/images/horta_logo.png">
-			</div>
-			<div class="logout">
-				<a href="<?php echo BASE_URL; ?>login/logout"><img src="<?php echo BASE_URL; ?>assets/images/icons/logout.png"></a>
-			</div>
-		</div>
-		<div class="menu">
-			
-		</div>
 
 
 	<script type="text/javascript" src="<?php echo BASE_URL; ?>assets/js/jquery-3.4.1.min.js"></script>
