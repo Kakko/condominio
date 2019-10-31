@@ -50,9 +50,9 @@ class Users extends Model {
         }
     }
 
-    public function getBuild(){ //Buscar o ID do prédio
-        if(isset($this->userInfo['building_id'])){
-            return $this->userInfo['building_id'];
+    public function getResidential(){ //Buscar o ID do prédio
+        if(isset($this->userInfo['residential_id'])){
+            return $this->userInfo['residential_id'];
         } else {
             return 'não tem';
         }

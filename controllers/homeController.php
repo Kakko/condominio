@@ -14,12 +14,12 @@ class homeController extends Controller {
     $data = array();
     $users = new Users();
     $users->setLoggedUser();
-    $building = new Building($users->getBuild());
+    $residential = new Residential($users->getResidential());
 
 
 
     $data['user_name'] = $users->getName();
-    $data['build_name'] = $building->get_building_name();
+    $data['residential_name'] = $residential->get_residential_name();
     $this->loadTemplate('home', $data);
     }
 

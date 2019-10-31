@@ -21,7 +21,6 @@
     margin-left: -15%;
     margin-top: -300px;
     border-radius: 10px;
-    box-shadow: 0 0 50px #399e59;
     img {
         width: 40%;
         border-radius: 10px;
@@ -49,7 +48,8 @@
 .top {
     width: 100%;
     height: 60px;
-    background-color: #1d1d1d;
+    background-color: rgb(36, 51, 94);
+
     .brand {
         width: 20%;
         height: 100%;
@@ -66,6 +66,7 @@
         width: 30%;
         height: 100%;
         float: right;
+        margin-right: 3%;
         color: white;
         line-height: 60px;
         a {
@@ -81,30 +82,7 @@
             background-repeat: no-repeat;
             background-position-x: 85px;
             background-position-y: 25px;
-        }
-    }
-    .drop_menu {
-        right: 0;
-        margin-top: 60px;
-        margin-right: 3%;
-        position: absolute;
-        color: white;
-        background-color: #1d1d1d;
-        border: 2px solid white;
-        border-radius: 10px;
-        width: 8%;
-        height: 150px;
-        z-index: 1;
-        text-align: center;
-        ul {
-            li {
-                padding-bottom: 10px;
-                padding-top: 10px;
-            }
-        }
-    }
-    .drop_menu_none {
-        display: none;
+   }
     }
 
 }
@@ -112,8 +90,81 @@
 .menu {
     width: 15%;
     height: calc(100vh - 60px);
-    background-image: linear-gradient(#1d1d1d, #399e59);
+    background-image: url(../images/resid1.jpg);
+    background-size: cover;
+    background-position-x: -670px;
     position: absolute;
     bottom: 0;
     left: 0;
+    .menu_mask {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(36,48,100,0.8),rgba(29,29,29,0.8));
+        img {
+            margin-left: 35%;
+            margin-top: 20px;
+        }
+        ul {
+            list-style: none;
+            width:100%;
+            margin-top: 20px;
+            a {
+                color: white;
+                text-decoration: none;
+                display: block;
+            }
+            li {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 25%;
+                background-repeat: no-repeat;
+                background-size: 20px 20px;
+                background-position-x: 25px;
+                background-position-y: 10px;
+                &:hover {
+                    background-color: rgba(0, 0, 0,0.3);
+                    transition: 0.2s;
+                }
+                &:nth-child(1){
+                    background-image: url(../images/Icons/building.png);
+                }
+                &:nth-child(2){
+                    background-image: url(../images/Icons/users.png);
+                }
+                &:nth-child(3){
+                    background-image: url(../images/Icons/rent.png);
+                }
+                &:nth-child(4){
+                    background-image: url(../images/Icons/schedule.png);
+                }
+                &:nth-child(5){
+                    background-image: url(../images/Icons/reunion.png);
+                }
+                &:nth-child(6){
+                    background-image: url(../images/Icons/exclamation);
+                }
+                &:nth-child(7){
+                    background-image: url(../images/Icons/contract.png);
+                }
+                &:nth-child(8){
+                    background-image: url(../images/Icons/building.png);
+                }
+                &:nth-child(9){
+                    background-image: url(../images/Icons/coffee.png);
+                }
+                &:nth-child(10){
+                    background-image: url(../images/Icons/contract.png);
+                }
+                &:nth-child(11){
+                    background-image: url(../images/Icons/bill.png);
+                }
+                &:nth-child(12){
+                    background-image: url(../images/Icons/faq.png);
+                }
+
+            }
+
+        }
+    }
+
 }
