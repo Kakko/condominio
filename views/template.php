@@ -32,8 +32,8 @@
 			<div class="menu_mask">
 			<img src="<?php echo BASE_URL; ?>assets/images/icons/user.png">
 				<ul>
-					<li><a href="#">Home</a></li>
-					<li><a href="#">Moradores</a></li>
+					<li><a href="<?php echo BASE_URL; ?>">Home</a></li>
+					<li><a href="<?php echo BASE_URL; ?>residents">Moradores</a></li>
 					<li><a href="#">Aluguel</a></li>
 					<li><a href="#">Agenda</a></li>
 					<li><a href="#">Assembléia</a></li>
@@ -46,6 +46,9 @@
 					<li><a href="#">FAQ</a></li>
 				</ul>
 			</div>
+		</div>
+		<div class="view_area">
+			<?php $this->loadViewInTemplate($viewName, $viewData) ;?>
 		</div>
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
