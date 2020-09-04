@@ -10,7 +10,7 @@ if(ENVIRONMENT == 'development') {
 	$config['dbname'] = 'condominio';
 	$config['host'] = 'localhost';
 	$config['dbuser'] = 'root';
-	$config['dbpass'] = 'root';
+	$config['dbpass'] = 'root1234';
 } else {
 	define("BASE_URL", "http://localhost/ilex/");
 	$config['dbname'] = 'ilex';

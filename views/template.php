@@ -8,7 +8,8 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<title>Gestão de Condomínios</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/style.css">
+    	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/template.css">
+    	<link rel="stylesheet" href="<?php echo BASE_URL; ?>assets/css/residents.css">
 	</head>
 	<body>
 		<div class="top">

@@ -7,16 +7,13 @@
     <div class="cards">
         <div class="card_title_prop">
             <h4>Proprietários</h4>
+            <?php echo $ownerQtd; ?>
         </div>
     </div>
     <div class="cards">
         <div class="card_title_rent">
             <h4>Inquilinos</h4>
-        </div>
-    </div>
-    <div class="cards">
-        <div class="card_title_func">
-            <h4>Funcionários</h4>
+            <?php echo $locatorQtd; ?>
         </div>
     </div>
 </div>
@@ -45,29 +42,27 @@
                         </div>
                     </div><hr/>
                     <div class="row">
-                        <div class="col-sm-4">
+                        <div class="col-sm">
                             <label for="Telefone 1">Telefone 1:</label>
-                            <input type="text" class="form-control form-control-sm" name="phone1" placehoder="Digite o Telefone (Fixo ou Celular) do morador">
+                            <input type="text" class="form-control form-control-sm" name="phone1" placeholder="(XX) XXXX-XXXX">
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm">
                             <label for="Telefone 2">Telefone 2:</label>
-                            <input type="text" class="form-control form-control-sm" name="phone2" placehoder="Digite o Telefone (Fixo ou Celular) do morador">
+                            <input type="text" class="form-control form-control-sm" name="phone2" placeholder="(XX) XXXX-XXXX">
                         </div>
-                        <div class="col-sm-4">
+                        <div class="col-sm">
                             <label for="owner_locator">Proprietário ou Inquilino:</label>
                             <select class="form-control form-control-sm" name="owner_locator">
                                 <option>Selecione:</option>
-                                <option>Proprietário</option>
-                                <option>Inquilino</option>
+                                <option value="owner">Proprietário</option>
+                                <option value="locator">Inquilino</option>
                             </select>
                         </div>
-                    </div><hr/>
-                    <div class="row">
-                        <div class="col-sm-4">
-                            <label for="landlord_name">Nome do Proprietário:</label>
-                            <input type="text" class="form-control form-control-sm" name="landlord_name" placeholder="Digite o nome do proprietário">
+                        <div class="col-sm">
+                            <label for="apt_number">Nº Apartamento:</label>
+                            <input type="number" class="form-control form-control-sm" name="apt_number" placeholder="Nº">
                         </div>
-                    </div>
+                    </div><hr/>
 				</div>
 				<!-- Modal footer -->
 				<div class="modal-footer">
@@ -78,38 +73,4 @@
 		</div>
 	</div>
 </div>
-
-<script>
-	function editar_setor(id) {
-		$.post('<?php echo BASE_URL ?>cadastros/setor', {
-			acao_setor: 'editar',
-			id: id
-		}, function(data) {
-
-			let dados = JSON.parse(data);
-			$("[name='id']").val(dados.id);
-			$("[name='nome']").val(dados.nome);
-
-			$("[name='acao_setor']").val('atualizar');
-			$('#modal_setor').modal('show');
-		});
-	}
-
-	function excluir_setor(id) {
-		let c = confirm("Deseja excluir?")
-		if (c == true) {
-			$.post('<?php echo BASE_URL ?>cadastros/setor', {
-				acao_setor: 'excluir',
-				id: id
-			}, function(data) {
-				window.location.reload();
-			});
-		}
-	}
-
-	function add_resident() {
-		$('#form_resident')[0].reset();
-		$("[name='acao_resident']").val('cadastrar');
-		$('#modal_resident').modal('show');
-	}
-</script>
+<script src="<?php echo BASE_URL; ?>assets/js/residents.js"></script>

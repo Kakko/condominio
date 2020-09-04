@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+//INICIO PÁGINA DE LOGIN
+.bg_horta {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/cond_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    // filter: blur(3px);
+}
+.login_area {
+    width: 30%;
+    height: 600px;
+    background-color: #fff9;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -15%;
+    margin-top: -300px;
+    border-radius: 10px;
+    img {
+        width: 40%;
+        border-radius: 10px;
+        margin-top: 20px;
+        margin-left: 30%;
+    }
+    .container {
+        width: 60%;
+        margin-top: 70px;
+        label {
+            color: #215732;
+        }
+        #input {
+            background-color: #fff0;
+            border: none;
+            border-bottom: 2px solid #215732;
+            width: 100%;
+            outline: none;
+            
+        }
+    }
+}
+//FINAL ÁREA DE LOGIN
+
